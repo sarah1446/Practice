@@ -1,0 +1,47 @@
+.container{
+   width: 410px;
+}
+ul{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    list-style: none;
+}
+li{
+    float: left;
+    width: 100px;
+    height: 100px;
+    line-height: 85px;
+    text-align: center;
+    font-size: 80px;
+    border: 1px solid aqua;
+}
+li.result{
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    font-size: 90px;
+    font-weight: bold;
+    color:#ff9800;
+}
+li.control{
+    position: relative;
+    top: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    color: aqua;
+}
+.zero{
+    width: 150px;
+    height: 40px;
+    margin: 10px auto 0;
+    background-color: aqua;
+    line-height:32px;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold
+}
