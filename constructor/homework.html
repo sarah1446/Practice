@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>profile</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <script>
+            // 문제1. 생성자
+
+            const Person = function(name, age, home) {
+                (this.name = name),
+                    (this.age = age),
+                    (this.home = home),
+                    (this.sayInfo = function() {
+                        return `${name}님이 사는 곳은 ${home}이며 나이는 ${age}살 입니다.`;
+                    });
+            };
+
+            const person = new Person('부엉이', 2, '숲');
+            const person2 = new Person('올빼미', 1, '숲속');
+
+            console.log(person.sayInfo());
+            console.log(person2.sayInfo());
+
+            // 문제2. 프로토타입
+
+            console.log('문자열'.sayString()); // 출력 : 문자열을 입력하셨네요
+
+        </script>
+    </body>
+
+</html>
