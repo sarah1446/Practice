@@ -1,0 +1,23 @@
+.profileWrap {
+  width: 250px;
+}
+.profileWrap .img {
+  width: 250px;
+  height: 250px;
+}
+.profileWrap .img img {
+  width: 250px;
+  height: 250px;
+}
+.profileWrap dl.info {
+  overflow: hidden;
+}
+.profileWrap dl.info dt {
+  float: left;
+  width: 80px;
+  height: 30px;
+}
+.profileWrap dl.info dd {
+  margin-left: 80px;
+  height: 30px;
+}
