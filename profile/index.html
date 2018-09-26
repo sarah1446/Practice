@@ -8,44 +8,97 @@
     </head>
 
     <body>
-
-
-
+        
+        <input id="nameInput" type="text" placeholder="Type id and Enter!">
+        <p id="resultBtn">결과보기! </p>
         <div class="profileWrap">
             <div class="img">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1TmsaSjiIrNc9A0oB7V6Z6jPj2_nQ68Vd-J3s8WFAmHEpUzfY" alt="">
+                <img class="avatar" src="" alt="">
             </div>
+            
             <dl class="info">
                 <dt>로그인</dt>
                 <dd class="login"></dd>
+
                 <dt>아이디</dt>
                 <dd class="id"></dd>
+
+                <dt>팔로잉</dt>
+                <dd class="following"></dd>
+
+                <dt>타입</dt>
+                <dd class="type"></dt>
+
+                <dt>바이오</dt>
+                <dd class="bio"></dt>
             </dl>
+           
         </div>
 
         <script>
+
+            let nameInput = document.querySelector('#nameInput');
+            let profileName; //input통해 입력받은 이름 // getName안에서 선언하고 return하면 console에서 찍힐 줄 알았는데...
+            //let dataFrom;
+            let resultBtn = document.querySelector('#resultBtn');
+            //누구의 데이터 받을지 이름 받기
+
+            nameInput.focus();
+
+            let getName = function(e){
+                
+                if(e.keyCode === 13){
+                    profileName = nameInput.value;
+                    //dataFrom = 'https://api.github.com/users/' + profileName;
+                    console.log(profileName);
+                    //return profileName;
+                    //return dataFrom; //전역에 선언해서 return 불필요?
+                    
+                }
+                let dataFrom = 'https://api.github.com/users/' + profileName;
+                
+                fetch(dataFrom)
+                    .then(blob => blob.json())
+                    .then(data => obj = data);
+            }
+            nameInput.addEventListener('keypress',getName);
+
+
+
+
             let obj;
-            const dataFrom = 'https://api.github.com/users/sarah1446';
-            fetch(dataFrom)
-                .then(blob => blob.json())
-                .then(data => obj = data);
+           
 
+            let dataDistribution = function() {
 
-            window.onload = function() {
                 const login = obj.login;
                 const id = obj.id;
-                const followers = obj.followers;
-
+                const following = obj.following;
+                const type = obj.type;
+                const bio = obj.bio;
+                const avatarUrl = obj.avatar_url
 
                 const loginDd = document.querySelector('.login');
                 loginDd.textContent = login;
-                console.dir(loginDd);
 
                 const idDd = document.querySelector('.id');
-                idDd.textContent = id; //
+                idDd.textContent = id;
 
+                const followingDd = document.querySelector('.following');
+                followingDd.textContent = following;
+
+                const typeDd = document.querySelector('.type');
+                typeDd.textContent = type;
+
+                
+                const bioDd = document.querySelector('.bio');
+                bioDd.textContent = bio;
+
+                const avatarShow = document.querySelector('.avatar').setAttribute('src',avatarUrl);
             }
 
+            resultBtn.addEventListener('click', dataDistribution);
+        
         </script>
 
     </body>

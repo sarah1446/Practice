@@ -1,15 +1,21 @@
 .profileWrap {
-  width: 250px;
+  overflow: hidden;
 }
 .profileWrap .img {
+  float:left;
   width: 250px;
   height: 250px;
+  margin-right:30px;
+  background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0yMNRG8rZiafyYTaFCaxGLKbjtEStX89UlxzityMG7zp87N9AA') no-repeat;
 }
+
 .profileWrap .img img {
   width: 250px;
   height: 250px;
+  
 }
 .profileWrap dl.info {
+  float:left;
   overflow: hidden;
 }
 .profileWrap dl.info dt {
@@ -20,4 +26,9 @@
 .profileWrap dl.info dd {
   margin-left: 80px;
   height: 30px;
+}
+#resultBtn{
+  width: 100px;
+  padding: 3px 0;
+  border:1px solid aqua;
 }
