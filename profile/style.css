@@ -32,3 +32,14 @@
   padding: 3px 0;
   border:1px solid aqua;
 }
+#nameInput{
+  font-size: 18px;
+  border: 1px solid #dadada;
+  border-radius: 22px;
+  padding: 5px 12px;
+  width: 300px;
+  height: 30px;
+  text-align: center;
+  color: #9C27B0;
+  outline: none
+}
