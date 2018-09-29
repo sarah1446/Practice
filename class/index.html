@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>Class</title>
+    </head>
+
+    <body>
+        <script>
+
+            // 문제1. 생성자
+            const Person = function(name, age, home) {
+                this.name = name;
+                this.age = age;
+                this.home = home;
+                this.sayInfo = function() {
+                    return `${name}님이 사는 곳은 ${home}이며 나이는 ${age}살 입니다.`;
+                };
+            };
+            const person = new Person('부엉이', 2, '숲');
+            const person2 = new Person('올빼미', 1, '숲속');
+
+            console.log(person.sayInfo());
+            console.log(person2.sayInfo());
+
+
+            // 문제2. 클래스 만들기
+            class fruit{
+                constructor(name, age, home){
+                    this.name = name;
+                    this.age = age;
+                    this.home = home;
+                    this.sayInfo = function() {
+                        return `${name}님이 사는 곳은 ${home}이며 나이는 ${age}살 입니다.`;
+                    };
+                }
+            }
+            const apple = new fruit('사과',23,'나무');
+            const banana = new fruit('바나나',123,'나무');
+            console.log(apple.sayInfo());
+            console.log(banana.sayInfo());
+
+        </script>
+    </body>
+</html>
