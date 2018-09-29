@@ -1,18 +1,18 @@
 .profileWrap {
   overflow: hidden;
+  margin-top: 20px;
 }
 .profileWrap .img {
   float:left;
-  width: 250px;
-  height: 250px;
+  width: 180px;
+  height: 180px;
   margin-right:30px;
-  background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0yMNRG8rZiafyYTaFCaxGLKbjtEStX89UlxzityMG7zp87N9AA') no-repeat;
+  background:url('https://www2.deloitte.com/content/dam/Deloitte/sg/Images/promo_images/sg-careers-students-d.cisions-linkedintip-2-profile-pic.jpg/_jcr_content/renditions/cq5dam.web.231.231.desktop.jpeg') no-repeat;
+  background-size: 100%;
 }
-
 .profileWrap .img img {
-  width: 250px;
-  height: 250px;
-  
+  width: 180px;
+  height: 180px;
 }
 .profileWrap dl.info {
   float:left;
@@ -27,17 +27,12 @@
   margin-left: 80px;
   height: 30px;
 }
-#resultBtn{
-  width: 100px;
-  padding: 3px 0;
-  border:1px solid aqua;
-}
 #nameInput{
   font-size: 18px;
   border: 1px solid #dadada;
   border-radius: 22px;
   padding: 5px 12px;
-  width: 300px;
+  width: 236px;
   height: 30px;
   text-align: center;
   color: #9C27B0;
