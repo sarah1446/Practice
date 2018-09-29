@@ -13,12 +13,12 @@
             // 문제1. 생성자
 
             const Person = function(name, age, home) {
-                (this.name = name),
-                    (this.age = age),
-                    (this.home = home),
-                    (this.sayInfo = function() {
-                        return `${name}님이 사는 곳은 ${home}이며 나이는 ${age}살 입니다.`;
-                    });
+                this.name = name;
+                this.age = age;
+                this.home = home;
+                this.sayInfo = function() {
+                    return `${name}님이 사는 곳은 ${home}이며 나이는 ${age}살 입니다.`;
+                };
             };
 
             const person = new Person('부엉이', 2, '숲');
@@ -28,9 +28,11 @@
             console.log(person2.sayInfo());
 
             // 문제2. 프로토타입
-
+            String.prototype.sayString = function(){
+                //console.log(this); //this는 String
+                return `${this}을 입력하셨네요~~`;
+            }
             console.log('문자열'.sayString()); // 출력 : 문자열을 입력하셨네요
-
         </script>
     </body>
 
