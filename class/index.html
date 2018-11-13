@@ -30,11 +30,15 @@
                     this.name = name;
                     this.age = age;
                     this.home = home;
-                    this.sayInfo = function() {
-                        return `${name}님이 사는 곳은 ${home}이며 나이는 ${age}살 입니다.`;
-                    };
                 }
             }
+            fruit.prototype.sayInfo = function(){
+                return `${this.name}님이 사는 곳은 ${this.home}이며 나이는 ${this.age}살입니다.`;
+            };
+            //fruit.prototype.sayInfo는 모든 객체가 공유하게 되어 한번만 생성되지만,
+            //fruit 클래스 안에 this.sayInfo로 하면 생성되는 객체마다 sayInfo도 만들어져 메모리가 낭비됨.
+
+
             const apple = new fruit('사과',23,'나무');
             const banana = new fruit('바나나',123,'나무');
             console.log(apple.sayInfo());
